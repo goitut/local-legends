@@ -3,45 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Add a Book - Local Legends</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .form-input {
+      transition: all 0.3s ease;
+    }
+    .form-input:focus {
+      border-color: #4CAF50;
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    }
+  </style>
 </head>
 <body>
-  <!-- Sticky Navbar -->
-<header class="sticky top-0 z-50 bg-white shadow-md">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <div class="flex items-center space-x-2">
-        <img src="" alt="Local-legends logo" class="h-10 w-10 object-cover rounded-full">
-        <span class="font-bold text-xl text-gray-800">Local Legends</span>
+  <!-- Navbar (same as other pages) -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-2">
+          <img src="" alt="Local-legends logo" class="h-10 w-10 object-cover rounded-full">
+          <span class="font-bold text-xl text-gray-800">Local Legends</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-gray-700 hover:text-green-600 transition">Home</a>
+          <a href="explore.html" class="text-gray-700 hover:text-green-600 transition">Explore</a>
+          <a href="add.html" class="text-gray-700 font-medium text-green-600 transition">Add a Story</a>
+          <a href="about.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+          <a href="contact.html" class="text-gray-700 hover:text-green-600 transition">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 max-w-2xl">
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">Add a New Book</h1>
+    
+    <form id="book-form" class="bg-white shadow-md rounded-lg p-6">
+      <div class="mb-4">
+        <label for="title" class="block text-gray-700 font-medium mb-2">Title*</label>
+        <input type="text" id="title" name="title" required
+               class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
       </div>
 
-      <!-- Navigation Links -->
-      <div class="hidden md:flex space-x-6">
-        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-        <a href="explore.html" class="text-gray-700 hover:text-blue-600 transition">Explore</a>
-        <a href="add.html" class="text-gray-700 hover:text-blue-600 transition">Add a Story</a>
-        <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About</a>
-        <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+      <div class="mb-4">
+        <label for="author" class="block text-gray-700 font-medium mb-2">Author*</label>
+        <input type="text" id="author" name="author" required
+               class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
       </div>
 
-      <!-- Mobile Menu Button (Optional for advanced step) -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="text-gray-800 focus:outline-none">
-          <!-- You can add a hamburger icon here later -->
-          ☰
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label for="illustrator" class="block text-gray-700 font-medium mb-2">Illustrator</label>
+          <input type="text" id="illustrator" name="illustrator"
+                 class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
+        </div>
+        <div>
+          <label for="publisher" class="block text-gray-700 font-medium mb-2">Publisher</label>
+          <input type="text" id="publisher" name="publisher"
+                 class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div>
+          <label for="grade-level" class="block text-gray-700 font-medium mb-2">Grade Level</label>
+          <input type="text" id="grade-level" name="grade-level" placeholder="K - 3rd"
+                 class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
+        </div>
+        <div>
+          <label for="run-time" class="block text-gray-700 font-medium mb-2">Run Time</label>
+          <input type="text" id="run-time" name="run-time" placeholder="10 minutes"
+                 class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="description" class="block text-gray-700 font-medium mb-2">Description*</label>
+        <textarea id="description" name="description" rows="4" required
+                  class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none"></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label for="cover-image" class="block text-gray-700 font-medium mb-2">Cover Image URL</label>
+        <input type="url" id="cover-image" name="cover-image" placeholder="https://example.com/image.jpg"
+               class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
+      </div>
+
+      <div class="flex justify-end space-x-4">
+        <button type="reset" class="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
+          Reset
+        </button>
+        <button type="submit" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+          Submit Book
         </button>
       </div>
+    </form>
+
+    <div id="success-message" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded-lg">
+      Book submitted successfully! It will be reviewed before appearing in the collection.
     </div>
-  </nav>
-</header>
+  </main>
+
+  <script>
+    document.getElementById('book-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Generate a unique ID (in a real app, this would come from a server)
+      const newId = 'BOOK' + Math.floor(1000 + Math.random() * 9000);
+      
+      // Create the book object
+      const newBook = {
+        book: {
+          id: newId,
+          title: document.getElementById('title').value,
+          author: document.getElementById('author').value,
+          illustrator: document.getElementById('illustrator').value,
+          publisher: document.getElementById('publisher').value,
+          narrator: "Not specified", // Could add another field for this
+          suggested_grade_level: document.getElementById('grade-level').value,
+          run_time: document.getElementById('run-time').value,
+          description: document.getElementById('description').value,
+          cover_image: document.getElementById('cover-image').value
+        }
+      };
+      
+      // In a real app, you would send this to a server
+      console.log('New book to be submitted:', newBook);
+      
+      // Show success message
+      document.getElementById('success-message').classList.remove('hidden');
+      document.getElementById('book-form').reset();
+      
+      // Scroll to show the message
+      document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+      
+      // In a real app, you might redirect or update the book list
+      // setTimeout(() => window.location.href = 'index.html', 2000);
+    });
+  </script>
 </body>
 </html>
-  
-
-
-
-
-
-

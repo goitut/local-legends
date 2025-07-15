@@ -1,0 +1,41 @@
+[
+  {
+  "book": {
+    "id": "BOOK001",
+    "title": "The Day You Begin",
+    "author": "Jacqueline Woodson",
+    "illustrator": "Rafael López",
+    "publisher": "Nancy Paulsen Books",
+    "narrator": "Jacqueline Woodson",
+    "suggested_grade_level": "K - 3rd",
+    "run_time": "10 minutes",
+    "description": "There will be times when you walk into a room and no one there is quite like you. This lyrical and heartwarming book explores the courage it takes to step into a place where nobody knows you, and how sometimes, when we reach out and begin to share our stories, others will meet us halfway."
+  }
+},
+{
+  "book": {
+    "id": "BOOK002",
+    "title": "After the Fall",
+    "author": "Dan Santat",
+    "illustrator": "Dan Santat",
+    "publisher": "Roaring Brook Press",
+    "narrator": "Dan Santat",
+    "suggested_grade_level": "1st - 4th",
+    "run_time": "12 minutes",
+    "description": "Everyone knows that when Humpty Dumpty sat on a wall, he had a great fall. But what happened after? This inspiring story follows Humpty as he overcomes his fear of heights, showing that sometimes getting back up leads to something wonderful."
+  }
+},
+{
+  "book": {
+    "id": "BOOK003",
+    "title": "The Word Collector",
+    "author": "Peter H. Reynolds",
+    "illustrator": "Peter H. Reynolds",
+    "publisher": "Scholastic",
+    "narrator": "Peter H. Reynolds",
+    "suggested_grade_level": "K - 3rd",
+    "run_time": "7 minutes",
+    "description": "Some people collect stamps. Some collect coins. Jerome collects words—short, sweet, and powerful. This uplifting book celebrates the magic of language and encourages young readers to discover the joy of words."
+  }
+}
+]
